@@ -3,7 +3,14 @@ var webpack = require('webpack');
  
 module.exports = {
   entry: 'src/app.js',
-  output: { path: __dirname, filename: 'app.js' },
+  output: {
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'app.[hash:7]js'
+  },
+  resolve: {
+    root: [path.join(__dirname, 'src')]
+  },
   module: {
     loaders: [
       {

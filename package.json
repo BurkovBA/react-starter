@@ -4,6 +4,8 @@
   "description": "Minimal website, written in React.js components",
   "main": "src/app.jsx",
   "scripts": {
+    "build": "node_modules/.bin/webpack -p",
+    "serve": "node_modules/.bin/webpack-dev-server --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

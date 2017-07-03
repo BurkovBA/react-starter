@@ -37,6 +37,7 @@ module.exports = {
     publicPath: '/',
     contentBase: './dist',
     hot: true
-  }
+  },
+  devtool: "source-map"
 };
 

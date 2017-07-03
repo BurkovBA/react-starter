@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Home extends React.Component {
   render() {
@@ -7,4 +6,4 @@ class Home extends React.Component {
   }
 }
 
-ReactDOM.render(<Home/>, document.getElementById('hello'));
+export default Home;

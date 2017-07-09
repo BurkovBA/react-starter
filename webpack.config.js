@@ -30,6 +30,26 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.(eot|com|json|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       }
     ]
   },
@@ -40,4 +60,3 @@ module.exports = {
   },
   devtool: "source-map"
 };
-

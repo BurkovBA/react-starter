@@ -13,7 +13,7 @@ import Layout from 'pages/Layout.jsx'
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route exact path="/" component={Layout} >
+    <Route path="/" component={Layout} >
     </Route>
   </Router>,
   document.getElementById('main')

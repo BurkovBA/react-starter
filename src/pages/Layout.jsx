@@ -19,13 +19,11 @@ class Layout extends React.Component {
         <div id="page-wrapper" className={wrapperClass}>
 
           <Header />
-            {this.props.children}
+            <Route path="/home" component={Home} />
+            <Route path="/about" component={About} />
           <Footer />
 
         </div>
-
-        <Route exact path="/" component={Home} />
-        <Route path="about" component={About} />
       </div>
     )
   }

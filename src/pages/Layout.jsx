@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, Redirect, Switch} from 'react-router-dom';
 
 // import Progress from 'components/Progress';
 import Navigation from 'components/Navigation';
@@ -19,8 +19,11 @@ class Layout extends React.Component {
         <div id="page-wrapper" className={wrapperClass}>
 
           <Header />
-            <Route path="/home" component={Home} />
-            <Route path="/about" component={About} />
+            <Switch>
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Redirect to="/home" />
+            </Switch>
           <Footer />
 
         </div>
